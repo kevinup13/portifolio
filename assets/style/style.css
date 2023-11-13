@@ -1,0 +1,128 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    /* --ff-montserrat:; */
+    --header-background: linear-gradient(to right, rgb(15, 47, 33), rgb(2, 34, 32));
+    --color-span: rgb(57, 150, 96);
+    --color-default: rgb(225, 225, 225);
+    --color-hover: rgb(57, 150, 96);
+}
+
+/* general styles */
+body {
+    background-color: #ddd;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    max-width: 1080px;
+    margin: 0 auto;
+    font-family: var(--ff-montserrat);
+}
+
+.float__navbar {
+    display: none;
+    /* flex - js */
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    background-color: darkgreen;
+    width: 50px;
+    height: 300px;
+    border-radius: 30px;
+    left: 20px;
+}
+
+/* header */
+header {
+    width: 100%;
+    height: calc(100vh - 100px);
+    background: var(--header-background);
+}
+
+.header {
+    display: flex;
+    width: inherit;
+    height: 100px;
+    border-bottom: 1px solid rgb(57, 150, 96);
+}
+
+.header__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: inherit;
+    font-size: 30px;
+    color: var(--color-default);
+    cursor: pointer;
+}
+
+.header__logo h2>span {
+    color: var(--color-span);
+}
+
+.header__navbar {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
+}
+
+.header--menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+
+}
+
+.header--menu ul,
+li {
+    list-style: none;
+    text-decoration: none;
+}
+
+.header--menu li a {
+    display: block;
+    padding: 5px 10px;
+    color: var(--color-default);
+    text-decoration: none;
+    margin-right: 10px;
+    font-size: 16px;
+    transition: all .2s;
+}
+
+.header__menu ul,
+li a.active,
+.header--menu li a:hover,
+.header__mode span:hover {
+    color: var(--color-hover);
+}
+
+.header__mode {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__mode span {
+    padding: 5px 10px;
+    color: var(--color-default);
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.header__icon--menu {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: inherit;
+    background-color: red;
+}
