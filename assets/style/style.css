@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=League+Spartan:wght@300;700&family=Montserrat:wght@400;600;700;800;900&family=Revalia&family=Source+Code+Pro:wght@300;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
 
 * {
     box-sizing: border-box;
@@ -15,10 +15,11 @@
     --color-hover: #00C29F;
     --color-line: #1E4D50;
     --bg-figma: #031E1F;
-    --opacity-hero: .5;
-    --font-weight: normal;
+    --opacity-hero: 1;
+    --font-weight: 500;
     --sun-display-icon: none;
     --moon-display-icon: block;
+    --ff-montserrat: 'Montserrat', sans-serif;
 }
 
 /* Light theme */
@@ -28,8 +29,8 @@
     --color-hover: #00C29F;
     --color-line: #00C29F;
     --bg-figma: linear-gradient(to right, #bacacc, #90e0e2);
-    --opacity-hero: .9;
-    --font-weight: 600;
+    --opacity-hero: 1;
+    --font-weight: 500;
     --sun-display-icon: block;
     --moon-display-icon: none;
 }
@@ -83,7 +84,9 @@ header {
     align-items: center;
     width: auto;
     height: inherit;
-    font-size: 30px;
+    font-family: 'Montesrrat';
+    font-size: 20px;
+    font-weight: 300;
     color: var(--color-default);
     cursor: pointer;
     transition: none;
@@ -220,6 +223,8 @@ li a.active,
 
 .hero__text p {
     font-size: 25px;
+    font-weight: var(--font-weight);
+    /*  */
     color: var(--color-default);
     line-height: 30px;
     margin-bottom: 10px;
@@ -250,7 +255,7 @@ path {
 
 .hero__image img {
     display: block;
-    max-width: 400px;
+    max-width: 450px;
     height: auto;
     opacity: var(--opacity-hero);
 }
