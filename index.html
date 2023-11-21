@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
     <title>Kevin - Portifólio</title>
     <link rel="stylesheet" href="./assets/style/style.css">
 </head>
@@ -87,7 +88,7 @@
                                         fill="rgb(225,225,225)" />
                                 </svg>
                             </a>
-                            <a href="#" class="hero--icons"> <!-- play-video -->
+                            <a href="#video-01" class="hero--icons"> <!-- play-video -->
                                 <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
                                     viewBox="0 0 25 25" width="40px" height="40px">
                                     <title>Video Play</title>
@@ -96,21 +97,100 @@
                                         fill="rgb(225,225,225)" />
                                 </svg>
                             </a>
-                        </div>
-                    </div>
-                </div>
+                        </div><!-- hero__social -->
+                    </div><!-- hero__text-->
+                </div><!-- hero__infor-->
                 <div class="hero__image">
                     <img src="./assets/images/Hero-dark.png" alt="" srcset="">
                 </div>
-            </div>
+            </div><!-- hero -->
         </div><!-- center -->
     </header>
 
     <section id="sobre"><!-- 100% -->
         <div class="center"><!-- 1080px -->
+            <div class="sobre">
+                <div class="sobre__content">
+                    <div class="sobre__infor">
+                        <h2>Quem sou eu?</h2>
+                        <p>Oi, eu me chamo <span>Kevin</span>, sou um desenvolvedor web front-end,
+                            entusiasta apaixonado pelo mundo da programação. Gosto
+                            de estudar, ler, praticar exercícios físicos e aprender coisas
+                            novas.</p>
+                        <p>Atualmente possuo conhecimentos nas seguintes Stacks:
+                            <span>Html5, Css3, Javascript, Typescript, Tailwind e Python,</span>
+                            juntamente com o sistema de versionamento <span>Git/Github</span>.
+                        </p>
 
-        </div>
+                        <h3>Ocupações atuais:</h3>
+                        <ul>
+                            <li>Estudande de programação.</li>
+                            <li>Funcionário na MS engenharia.</li>
+                        </ul>
+                    </div><!-- sobre__infor -->
+
+                    <div class="sobre__video">
+                        <h3>Video de apresentação</h3>
+                        <video id="video--apresentacao" class="video" src="./assets/midia/video-01.mp4" controls
+                            preload=""></video>
+                        <div class="sobre--buttons">
+                            <input class="active" onclick="alterarVideo('./assets/midia/video-01.mp4')" type="button"
+                                value="Português">
+                            <input onclick="alterarVideo('./assets/midia/video-02.mp4')" type="button" value="Inglês">
+                        </div>
+                    </div><!-- sobre__video -->
+
+                </div><!-- sobre__content -->
+            </div><!-- sobre -->
+        </div><!-- center -->
     </section>
+
+    <section id="skills"> <!-- 100% -->
+        <div class="center"><!-- 1080px -->
+            <div class="skills">
+                <div class="skills__title">
+                    <h2>Skills</h2>
+                </div>
+
+                <div class="skills__content">
+                    <div class="skills--img">
+                        <img src="./assets/images/sobre.png" alt="">
+                    </div>
+
+                    <div class="skills__stacks">
+                        <ul class="skill--items">
+                            <li class="skill--item">
+                                <img src="" alt="">
+                                <i class="devicon-html5-plain"></i>
+                            </li>
+                            <li class="skill--item">
+                                <i class="devicon-css3-plain"></i>
+                            </li>
+                            <li class="skill--item">
+                                <i class="devicon-javascript-plain"></i>
+                            </li>
+                            <li class="skill--item">
+                                <i class="devicon-typescript-plain"></i>
+                            </li>
+                            <li class="skill--item">
+                                <i class="devicon-python-plain"></i>
+                            </li>
+                            <li class="skill--item">
+                                <i class="devicon-tailwindcss-plain"></i>
+                            </li>
+                            <li class="skill--item">
+                                <i class="devicon-bootstrap-plain"></i>
+                            </li>
+                            <li class="skill--item">
+                                <i class="devicon-git-plain"></i>
+                            </li>
+                            <li class="skill--item">Em andamento</li>
+                        </ul><!-- skill--items-->
+                    </div><!-- skills__stacks -->
+                </div><!-- skills__content -->
+            </div><!-- skills -->
+        </div><!-- center -->
+    </section><!-- skills -->
 
     <div class="float__navbar"><!-- actived by scroll -->
 

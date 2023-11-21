@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;300;400;500;600;700;900&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
 
 * {
     box-sizing: border-box;
@@ -8,6 +8,9 @@
     transition: all ease-in-out .2s;
 }
 
+/*   font-family: 'League Spartan', sans-serif;
+font-family: 'Montserrat', sans-serif;
+*/
 /* Dark theme default */
 :root {
     --color-span: #00C29F;
@@ -15,11 +18,13 @@
     --color-hover: #00C29F;
     --color-line: #1E4D50;
     --bg-figma: #031E1F;
+    --body-background: #0A1111;
     --opacity-hero: 1;
-    --font-weight: 500;
+    --font-weight: 300;
     --sun-display-icon: none;
     --moon-display-icon: block;
     --ff-montserrat: 'Montserrat', sans-serif;
+    --ff-league-Spartan: 'League Spartan', sans-serif;
 }
 
 /* Light theme */
@@ -29,8 +34,9 @@
     --color-hover: #00C29F;
     --color-line: #00C29F;
     --bg-figma: linear-gradient(to right, #bacacc, #90e0e2);
+    --body-background: #d8d8d8;
     --opacity-hero: 1;
-    --font-weight: 500;
+    --font-weight: 400;
     --sun-display-icon: block;
     --moon-display-icon: none;
 }
@@ -47,6 +53,10 @@ body {
     height: 100%;
     margin: 0 auto;
     font-family: var(--ff-montserrat);
+}
+
+.active {
+    color: var(--color-hover) !important;
 }
 
 /* float navbar - actived by scroll and js */
@@ -86,7 +96,7 @@ header {
     height: inherit;
     font-family: 'Montesrrat';
     font-size: 20px;
-    font-weight: 300;
+    font-weight: 600;
     color: var(--color-default);
     cursor: pointer;
     transition: none;
@@ -124,7 +134,7 @@ li {
     text-decoration: none;
     margin-right: 10px;
     font-size: 16px;
-    font-weight: var(--font-weight);
+    font-weight: 500;
     transition: all .2s;
 }
 
@@ -151,7 +161,7 @@ li a.active,
     align-items: center;
     color: var(--color-default);
     cursor: pointer;
-    font-weight: var(--font-weight);
+    font-weight: 500;
     transition: none;
 }
 
@@ -185,7 +195,7 @@ li a.active,
     background-color: rgb(179, 0, 255);
 }
 
-/* hero */
+/* Section Hero */
 .hero {
     display: flex;
     width: inherit;
@@ -223,7 +233,7 @@ li a.active,
 
 .hero__text p {
     font-size: 25px;
-    font-weight: var(--font-weight);
+    font-weight: 500;
     /*  */
     color: var(--color-default);
     line-height: 30px;
@@ -258,4 +268,213 @@ path {
     max-width: 450px;
     height: auto;
     opacity: var(--opacity-hero);
+}
+
+/* section Sobre */
+#skills,
+#sobre {
+    background-color: var(--body-background);
+}
+
+.skills,
+.sobre {
+    display: flex;
+    flex-direction: column;
+    width: inherit;
+    height: 100%;
+}
+
+
+.sobre--title {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.sobre--title h2 {
+    font-size: 30px;
+    font-family: var(--ff-montserrat);
+    color: var(--color-default);
+    font-weight: var(--font-weight);
+}
+
+.skills__content,
+.sobre__content {
+    display: flex;
+    border-bottom: 1px solid var(--color-line);
+}
+
+.sobre__content {
+    padding-top: 80px;
+}
+
+.sobre__infor,
+.sobre__video {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 450px;
+    padding: 0 10px;
+}
+
+.sobre__infor h2 {
+    font-family: var(--ff-league-Spartan);
+    font-size: 40px;
+    font-weight: 400;
+    color: var(--color-hover);
+    border-bottom: 1px solid var(--color-hover);
+    padding-bottom: 10px;
+
+}
+
+.sobre__infor span,
+.sobre__infor ul li,
+.sobre__infor p {
+    font-family: var(--ff-league-Spartan);
+    font-size: 20px;
+    font-weight: var(--font-weight);
+    color: var(--color-default);
+    line-height: 25px;
+    margin-top: 10px;
+    text-align: justify;
+}
+
+.sobre__infor span {
+    color: var(--color-hover) !important;
+}
+
+.sobre__infor ul li {
+    margin-left: 20px;
+    list-style: disc;
+}
+
+.sobre__infor h3 {
+    font-family: var(--ff-league-Spartan);
+    font-size: 25px;
+    font-weight: 400;
+    color: var(--color-hover);
+    line-height: 30px;
+    margin-top: 10px;
+}
+
+.sobre__video {
+    padding: 10px;
+    align-items: center;
+}
+
+.sobre__video video {
+    margin-top: 10px;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 1px solid var(--color-span);
+    cursor: pointer;
+}
+
+.sobre__video h3 {
+    color: var(--color-default);
+    font-weight: 300;
+    font-size: 20px;
+    font-family: var(--ff-league-Spartan);
+}
+
+.sobre__video .video {
+    display: block;
+    background-color: black;
+    width: 100%;
+    height: 290px;
+}
+
+.sobre--buttons {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.sobre--buttons input {
+    display: block;
+    border: none;
+    background-color: transparent;
+    font-weight: var(--font-weight);
+    color: var(--color-default);
+    margin: 10px;
+    cursor: pointer;
+}
+
+.sobre--buttons input:hover {
+    color: var(--color-hover);
+}
+
+/* section skills */
+.skills {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.skills__content {
+    padding-bottom: 80px;
+}
+
+.skills__title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+
+}
+
+.skills__title h2 {
+    color: var(--color-default);
+    font-family: var(--ff-montserrat);
+    font-size: 30px;
+    font-weight: var(--font-weight);
+}
+
+.skills--img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+.skills--img img {
+    height: 420px;
+    opacity: .8;
+}
+
+
+
+.skills__stacks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 50%;
+}
+
+.skill--items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.skill--item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 120px;
+    height: 120px;
+    background-color: var(--color-line);
+    border-radius: 10px;
+    margin: 10px;
+    color: var(--color-default)
+}
+
+.skill--item i {
+    font-size: 70px;
+    color: var(--color-default)
 }
