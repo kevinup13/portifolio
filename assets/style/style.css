@@ -509,6 +509,8 @@ path {
 .projeto:hover .description {
     /* opacity: 8; */
     margin-bottom: 0;
+    opacity: 1;
+    transition: opacity 0.3s, margin-bottom .3s;
 }
 
 .projeto-01 {
@@ -537,8 +539,11 @@ path {
     /* background-color: red; */
     background: var(--bg-description);
     /* opacity: 0; */
+    opacity: 0;
     margin-bottom: -200px;
-    transition: all ease-in-out .5s;
+    transition: opacity 0.3s, margin-bottom 0.3s;
+
+
 }
 
 
@@ -574,7 +579,7 @@ path {
     text-decoration: none;
     color: var(--color-link);
     font-size: 16px;
-    font-weight: var(--font-weight);
+    font-weight: 500;
     font-family: var(--ff-league-Spartan);
 
 }
@@ -639,4 +644,5 @@ path {
 .portifolio__content a:hover {
     color: var(--color-hover);
     text-decoration: underline;
+    text-shadow: 0px 0px 3px black;
 }
