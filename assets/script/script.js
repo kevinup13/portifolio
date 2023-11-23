@@ -39,14 +39,14 @@ changeThemeBtn.addEventListener("change", () => {
     toggleTheme();
     verifyTheme();
     // save theme
-    /*  if ($html.classList.contains("light")) {
-         localStorage.setItem('html', 'light');
-     } else {
-         localStorage.setItem('html', '');
-     } */
+    if ($html.classList.contains("light")) {
+        localStorage.setItem('html', 'light');
+    } else {
+        localStorage.setItem('html', '');
+    }
 
     // verifica qual tema está ativo e salva no localstore
-    $html.classList === "light" ? localStorage.setItem('html', 'light') : localStorage.setItem('html', '');
+    /* $html.classList === "light" ? localStorage.setItem('html', 'light') : localStorage.setItem('html', ''); */
 })
 loadTheme();
 
