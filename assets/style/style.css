@@ -14,7 +14,8 @@ font-family: 'Montserrat', sans-serif;
 /* Dark theme default */
 :root {
     --color-span: #00C29F;
-    --color-default: rgb(225, 225, 225);
+    --color-default: rgb(202, 202, 202);
+    --color-gray: #86A1A3;
     --color-hover: #00C29F;
     --color-line: #1E4D50;
     --bg-figma: #031E1F;
@@ -207,6 +208,8 @@ li a.active,
     padding-bottom: 40px;
 }
 
+
+
 .hero__infor,
 .hero__image {
     display: flex;
@@ -273,7 +276,8 @@ path {
     opacity: var(--opacity-hero);
 }
 
-/* section Sobre */
+/* sections - global css */
+#contato,
 #portifolio,
 #skills,
 #sobre {
@@ -288,15 +292,19 @@ path {
     align-items: center;
     width: inherit;
     height: 100%;
+    border-bottom: 1px solid var(--color-line);
 }
 
+.contato__content,
 .portifolio__content,
 .skills__content,
 .sobre__content {
     display: flex;
-    border-bottom: 1px solid var(--color-line);
+    width: 100%;
+
 }
 
+/* section sobre */
 .sobre__content {
     padding-top: 80px;
 }
@@ -399,16 +407,12 @@ path {
 }
 
 /* section skills */
-.skills {
-    display: flex;
-    flex-direction: column;
-
-}
 
 .skills__content {
     padding-bottom: 80px;
 }
 
+.contato__title,
 .portifolio__title,
 .skills__title {
     display: flex;
@@ -419,6 +423,7 @@ path {
 
 }
 
+.contato__title h2,
 .portifolio__title h2,
 .skills__title h2 {
     color: var(--color-default);
@@ -478,6 +483,7 @@ path {
 }
 
 /* section portifólio */
+
 .portifolio__content {
     flex-direction: column;
     align-items: center;
@@ -511,14 +517,6 @@ path {
     margin-bottom: 0;
     opacity: 1;
     transition: opacity 0.3s, margin-bottom .3s;
-}
-
-.projeto-01 {
-    grid-column: 1 / span 2;
-    grid-row: 1 / span 3;
-    background-image: url('/assets/images/img-01.jpg');
-    background-position: right;
-    background-repeat: no-repeat;
 }
 
 .projeto-06 .description,
@@ -560,6 +558,7 @@ path {
     color: var(--color-default);
     font-family: var(--ff-montserrat);
     font-size: 14px;
+    font-weight: 500;
 }
 
 .description p::after {
@@ -581,12 +580,28 @@ path {
     font-size: 16px;
     font-weight: 500;
     font-family: var(--ff-league-Spartan);
+}
 
+.description a:hover {
+    color: var(--color-link);
 }
 
 .description a::after {
     content: ' 🔗';
     font-size: 14px;
+}
+
+.projeto-01:hover {
+    background-color: black;
+}
+
+.projeto-01 {
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 3;
+    background-image: url('/assets/images/img-01.jpg');
+    background-position: right;
+    background-repeat: no-repeat;
+
 }
 
 .projeto-02 {
@@ -644,5 +659,164 @@ path {
 .portifolio__content a:hover {
     color: var(--color-hover);
     text-decoration: underline;
-    text-shadow: 0px 0px 3px black;
+
+}
+
+/* section Contato */
+
+.contato {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: inherit;
+    height: 100%;
+    padding-bottom: 40px;
+}
+
+.contato__frase,
+.contato__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 450px;
+}
+
+.contato__frase h2 {
+    color: var(--color-default);
+    font-size: 50px;
+    font-weight: 700;
+
+}
+
+.contato__form form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 450px;
+    height: auto;
+}
+
+.contato__form form input[type=submit] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: 3px solid var(--color-span);
+    color: var(--color-span);
+    font-weight: 700;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.contato__form form input[type=submit]:hover {
+    background-color: var(--color-hover);
+    color: black;
+}
+
+.contato__form h3 {
+    font-size: 25px;
+    font-weight: 500;
+    font-family: var(--ff-montserrat);
+    color: var(--color-span);
+    margin-bottom: 20px;
+}
+
+.input-box {
+    position: relative;
+    margin: 20px;
+    word-wrap: break-word;
+    width: 100%;
+    border-bottom: 2px solid var(--color-line);
+}
+
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    color: var(--color-link);
+    font-size: 18px;
+    font-family: Montserrat;
+    font-weight: 400;
+    pointer-events: none;
+    transition: all 0.3s ease-in-out;
+}
+
+textarea:focus~label,
+input:focus~label,
+input:valid~label {
+    top: -10px;
+}
+
+
+
+.input-box input {
+    width: 100%;
+    height: 40px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    padding: 0 25px 0 25px;
+    color: var(--color-default);
+
+}
+
+.input-box textarea {
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    padding: 0 25px 0 25px;
+    color: var(--color-default);
+    resize: none;
+    word-wrap: break-word;
+}
+
+
+/* footer */
+
+
+footer {
+    display: flex;
+    width: 100%;
+    height: 200px;
+    background-color: black;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 1080px;
+    height: inherit;
+}
+
+.footer .hero__social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: none;
+}
+
+.footer .hero__social a>svg {
+    display: block;
+    margin: 10px;
+}
+
+
+.footer h5 {
+    font-family: var(--ff-montserrat);
+    font-weight: 300;
+    font-size: 15px;
+    color: #1E4D50;
+    margin-top: 10px;
 }
