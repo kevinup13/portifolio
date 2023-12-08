@@ -67,7 +67,9 @@ btnVideo.forEach((btn) => {
 window.onscroll = function () { myScroll() };
 
 function myScroll() {
-    if (document.documentElement.scrollTop > 300) {
+    let windowWidth = window.innerWidth;
+    let screenWidth = screen.Width;
+    if (document.documentElement.scrollTop > 300 && windowWidth > 768 || screenWidth > 768) {
         document.getElementById("float__navbar").style.display = "block";
     } else {
         document.getElementById("float__navbar").style.display = "none";
