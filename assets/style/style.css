@@ -41,7 +41,7 @@ font-family: 'Montserrat', sans-serif;
     --color-hover: #00C29F;
     --color-line: #00C29F;
     /* --bg-figma: linear-gradient(to right, #bacacc, #90e0e2); */
-    --bg-figma: linear-gradient(to right, #ccccdc, #4acf98);
+    --bg-figma: linear-gradient(to right, #ccccdc, #89ffce);
     --bg-description: linear-gradient(#00000000, #bababa);
     --body-background: #d8d8d8;
     --opacity-hero: 1;
@@ -904,12 +904,18 @@ footer {
     .hero {
         flex-direction: column-reverse;
         width: 100%;
+        padding-top: 0;
     }
 
     .hero__infor,
     .hero__image {
         text-align: center;
         align-items: center;
+        padding: 0 20px;
+        width: 100%;
+    }
+
+    .hero__image img {
         width: 100%;
     }
 
@@ -930,12 +936,19 @@ footer {
 
     .skills__content,
     .sobre__content {
+        padding: 0 20px;
         flex-direction: column;
     }
 
     .sobre__infor,
     .sobre__video {
+        margin-top: 40px;
         width: 100%;
+    }
+
+    .sobre__video {
+        height: auto;
+        padding-bottom: 40px;
     }
 
     .skills__stacks,
@@ -943,12 +956,22 @@ footer {
         width: 100%;
     }
 
+    .skills--img img {
+        width: 100%;
+        height: auto;
+    }
+
+    .portifolio__content {
+        padding-bottom: 40px;
+    }
+
     .portifolio__grid {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(12, 1fr);
-
+        padding: 0 20px;
         width: 100%;
         height: auto;
+        gap: 20px;
 
     }
 
@@ -1004,11 +1027,12 @@ footer {
 
     .contato__form form {
         width: 100%;
-        padding: 10px;
+        padding: 0 20px;
     }
 
     .contato__frase h2 {
         text-align: center;
+        height: auto;
         margin: 20px;
         font-size: 40px;
     }
@@ -1022,15 +1046,8 @@ footer {
     }
 
     .footer {
-        width: inherit;
+        width: 100%;
         height: inherit;
-    }
-
-    .footer .hero__social path {
-        fill: var(--color-gray);
-        margin-right: 20px;
-        cursor: pointer;
-
     }
 
 }
