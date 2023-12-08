@@ -855,7 +855,7 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 1080px;
+    max-width: 1080px;
     height: inherit;
 }
 
@@ -911,6 +911,10 @@ footer {
         text-align: center;
         align-items: center;
         width: 100%;
+    }
+
+    .hero__text {
+        margin-left: 0;
     }
 
     .hero__text .hero__social {
