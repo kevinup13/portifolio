@@ -62,3 +62,15 @@ btnVideo.forEach((btn) => {
         }
     })
 })
+
+/* scrool menu flutuante */
+window.onscroll = function () { myScroll() };
+
+function myScroll() {
+    if (document.documentElement.scrollTop > 300) {
+        document.getElementById("float__navbar").style.display = "block";
+    } else {
+        document.getElementById("float__navbar").style.display = "none";
+    }
+
+}
