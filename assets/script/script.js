@@ -2,6 +2,7 @@
 const changeThemeBtn = document.querySelector("#change-theme");
 const $html = document.querySelector("html");
 const btnMenuMobile = document.querySelector(".header--icon");
+const menuMobile = document.getElementById('menuMobile');
 
 
 // Functions
@@ -38,7 +39,7 @@ function alterarVideo(novoSrc) {
 
 
 function showMenu() {
-    let menuMobile = document.getElementById('menuMobile');
+
     let headerMenu = document.querySelector('.header--menu');
     if (menuMobile.classList.contains("header__navbar")) {
         menuMobile.classList.remove('header__navbar');
@@ -64,7 +65,9 @@ function showMenu() {
 
 
 }
-
+menuMobile.addEventListener('click', () => {
+    showMenu();
+})
 btnMenuMobile.addEventListener('click', () => {
     showMenu();
 })

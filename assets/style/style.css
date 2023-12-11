@@ -273,13 +273,14 @@ li a.active,
     align-items: flex-start;
     width: 200px;
     height: 100%;
-    padding: 20px;
+    padding-top: 40px;
+    padding-left: 40px;
     /* -200px */
     background-color: var(--body-background);
 }
 
 .header .header--menu--mobile li {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .header .header--menu--mobile li,
