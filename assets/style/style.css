@@ -139,6 +139,7 @@ header {
     width: inherit;
     height: 100px;
     border-bottom: 2px solid var(--color-line);
+    position: relative;
 }
 
 .header__logo {
@@ -252,6 +253,39 @@ li a.active,
     width: 40px;
     height: 40px;
     cursor: pointer;
+}
+
+.header__navbar__mobile {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    height: calc(100vh - 70px);
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.header--menu--mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 200px;
+    height: 100%;
+    padding: 20px;
+    /* -200px */
+    background-color: var(--body-background);
+}
+
+.header .header--menu--mobile li {
+    margin-bottom: 10px;
+}
+
+.header .header--menu--mobile li,
+a {
+    text-decoration: none;
+    color: var(--color-default);
 }
 
 /* Section Hero */
@@ -940,15 +974,15 @@ footer {
         flex-direction: column;
     }
 
-    .sobre__infor,
-    .sobre__video {
+    .sobre__infor {
         margin-top: 40px;
-        width: 100%;
     }
 
+    .sobre__infor,
     .sobre__video {
         height: auto;
         padding-bottom: 40px;
+        width: 100%;
     }
 
     .skills__stacks,

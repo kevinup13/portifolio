@@ -1,6 +1,8 @@
 // Initial data
 const changeThemeBtn = document.querySelector("#change-theme");
 const $html = document.querySelector("html");
+const btnMenuMobile = document.querySelector(".header--icon");
+
 
 // Functions
 
@@ -34,6 +36,40 @@ function alterarVideo(novoSrc) {
     video.src = novoSrc;
 }
 
+
+function showMenu() {
+    let menuMobile = document.getElementById('menuMobile');
+    let headerMenu = document.querySelector('.header--menu');
+    if (menuMobile.classList.contains("header__navbar")) {
+        menuMobile.classList.remove('header__navbar');
+        menuMobile.classList.add('header__navbar__mobile')
+        headerMenu.classList.remove('header--menu');
+        headerMenu.classList.add('header--menu--mobile')
+    } else {
+        menuMobile.classList.add('header__navbar');
+        menuMobile.classList.remove('header__navbar__mobile')
+        headerMenu.classList.add('header--menu');
+        headerMenu.classList.remove('header--menu--mobile')
+    }
+    document.body.onresize = () => {
+        let telaWidth = document.body.clientWidth;
+        let screenWidth = document.body.screenWidth;
+        if (telaWidth > 768 || screenWidth > 768) {
+            menuMobile.classList.add('header__navbar');
+            menuMobile.classList.remove('header__navbar__mobile')
+            headerMenu.classList.add('header--menu');
+            headerMenu.classList.remove('header--menu--mobile')
+        };
+    }
+
+
+}
+
+btnMenuMobile.addEventListener('click', () => {
+    showMenu();
+})
+
+
 // Events
 changeThemeBtn.addEventListener("change", () => {
     toggleTheme();
@@ -62,6 +98,7 @@ btnVideo.forEach((btn) => {
         }
     })
 })
+
 
 /* scrool menu flutuante */
 window.onscroll = function () { myScroll() };
