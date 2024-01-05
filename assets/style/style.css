@@ -52,12 +52,16 @@ font-family: 'Montserrat', sans-serif;
 
 /* general styles */
 html {
+    width: 100%;
+    height: 100%;
     scroll-behavior: smooth !important;
     -webkit-scroll-behavior: smooth;
 }
 
 
 body {
+    width: 100%;
+    height: 100%;
     position: relative;
     background-color: #eef;
 }
@@ -89,7 +93,8 @@ body {
     border-radius: 30px;
     top: calc(100vh - 70%);
     left: 20px;
-    transition: opacity 5 ease-in-out .3s;
+    transition: all .3s ease-in-out;
+    animation: animeOpacity .8s;
 }
 
 
@@ -162,7 +167,7 @@ header {
 
 .header__navbar {
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-end !important;
     align-items: center;
     flex: 1;
 }
@@ -255,39 +260,9 @@ li a.active,
     cursor: pointer;
 }
 
-.header__navbar__mobile {
-    position: absolute;
-    top: 70px;
-    left: 0;
-    display: flex;
-    justify-content: flex-end;
-    width: 100%;
-    height: calc(100vh - 70px);
-    background-color: rgba(0, 0, 0, 0.5);
-}
+/* colar de volta aqui menu mobile */
 
-.header--menu--mobile {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    width: 200px;
-    height: 100%;
-    padding-top: 40px;
-    padding-left: 40px;
-    /* -200px */
-    background-color: var(--body-background);
-}
 
-.header .header--menu--mobile li {
-    margin-bottom: 20px;
-}
-
-.header .header--menu--mobile li,
-a {
-    text-decoration: none;
-    color: var(--color-default);
-}
 
 /* Section Hero */
 .hero {
@@ -611,7 +586,6 @@ path {
     /* opacity: 8; */
     margin-bottom: 0;
     opacity: 1;
-    transition: opacity 0.3s, margin-bottom .3s;
 }
 
 .projeto-06 .description,
@@ -922,7 +896,54 @@ footer {
     margin-top: 10px;
 }
 
+
+@keyframes animeOpacity {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 8;
+    }
+}
+
 @media screen and (max-width:768px) {
+    .header__navbar {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 600px;
+        background-color: rgba(0, 0, 0, 0.5);
+        transition: all .3s ease-in-out;
+        animation: animeOpacity .3s;
+    }
+
+    .header--menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 200px;
+        height: 100%;
+        padding-top: 40px;
+        padding-left: 40px;
+        background-color: var(--body-background);
+    }
+
+    .header .header--menu li {
+        margin-bottom: 20px;
+    }
+
+    .header .header--menu li,
+    a {
+        text-decoration: none;
+        color: var(--color-default);
+    }
+
+    /* mobile */
     .header {
         padding: 0 10px;
         justify-content: space-between;

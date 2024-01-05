@@ -2,7 +2,7 @@
 const changeThemeBtn = document.querySelector("#change-theme");
 const $html = document.querySelector("html");
 const btnMenuMobile = document.querySelector(".header--icon");
-const menuMobile = document.getElementById('menuMobile');
+const menuMobile = document.querySelector('.header__navbar');
 
 
 // Functions
@@ -37,43 +37,33 @@ function alterarVideo(novoSrc) {
     video.src = novoSrc;
 }
 
-
 function showMenu() {
-
-    let headerMenu = document.querySelector('.header--menu');
-    if (menuMobile.classList.contains("header__navbar")) {
-        menuMobile.classList.remove('header__navbar');
-        menuMobile.classList.add('header__navbar__mobile')
-        headerMenu.classList.remove('header--menu');
-        headerMenu.classList.add('header--menu--mobile')
+    let headerNavBar = document.querySelector('.header__navbar');
+    if (headerNavBar.style.display == 'none') {
+        headerNavBar.style.display = 'flex';
     } else {
-        menuMobile.classList.add('header__navbar');
-        menuMobile.classList.remove('header__navbar__mobile')
-        headerMenu.classList.add('header--menu');
-        headerMenu.classList.remove('header--menu--mobile')
+        headerNavBar.style.display = 'none';
     }
     document.body.onresize = () => {
         let telaWidth = document.body.clientWidth;
         let screenWidth = document.body.screenWidth;
+
         if (telaWidth > 768 || screenWidth > 768) {
-            menuMobile.classList.add('header__navbar');
-            menuMobile.classList.remove('header__navbar__mobile')
-            headerMenu.classList.add('header--menu');
-            headerMenu.classList.remove('header--menu--mobile')
+            headerNavBar.style.display = 'flex';
+        }
+        else {
+            headerNavBar.style.display = 'none';
         };
     }
-
-
 }
-menuMobile.addEventListener('click', () => {
-    showMenu();
-})
+
+
+// Events
+
 btnMenuMobile.addEventListener('click', () => {
     showMenu();
 })
 
-
-// Events
 changeThemeBtn.addEventListener("change", () => {
     toggleTheme();
     verifyTheme();
@@ -115,4 +105,4 @@ function myScroll() {
         document.getElementById("float__navbar").style.display = "none";
     }
 
-}
+} 
