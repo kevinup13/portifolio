@@ -9,7 +9,7 @@ const menuMobile = document.querySelector('.header__navbar');
 
 function toggleTheme() {
     // muda o tema da página
-    $html.classList.toggle("light");
+    $html.classList.toggle("Dark");
 }
 function verifyTheme() {
     // verifica qual tema está ativo e muda o texto do tema
