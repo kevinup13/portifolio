@@ -3,26 +3,20 @@
 
 /* Definição de variáveis */
 :root {
+  --color-primary: rgb(185, 185, 185);
+  --color-secondary: rgb(28, 28, 28);
   --color-span: #00C29F;
-  --color-default: rgb(202, 202, 202);
-  --color-float: rgb(202, 202, 202);
-  --hover-float: #00C29F;
-  --color-gray: #86A1A3;
   --color-hover: #00C29F;
-  --color-line: #1E4D50;
-  --bg-figma: #031E1F;
-  --bg-description: linear-gradient(#00000000, #000202);
-  --body-background: #0A1111;
-  --opacity-hero: 1;
-  --font-weight: 300;
-  --sun-display-icon: none;
-  --moon-display-icon: block;
+  --color-gray: #86A1A3;
+
+  --background-primary: #0b2b28;
+  --background-secondary: #082321;
+
   --ff-montserrat: 'Montserrat', sans-serif;
   --ff-league-Spartan: 'League Spartan', sans-serif;
-  --color-link: #1E4D50;
 }
 
-/* Definição de estilos globais */
+/* Estilos globais */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -31,7 +25,13 @@
   transition: all ease-in-out 0.2s;
   font-size: 16px;
 }
-/* Estilos para o Header */
+html {
+  scroll-behavior: smooth;
+  font-size: 100%;
+}
+
+
+/* Header */
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -41,12 +41,11 @@
 header {
   width: 100%;
   height: 80px;
-  background: var(--bg-figma);
+  background: var(--background-secondary);
   position: fixed;
   top: 0;
   left: 0;
   z-index: 1000;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .logo {
@@ -60,11 +59,11 @@ header {
 
 .logo a {
   text-decoration: none;
-  color: var(--color-default);
+  color: var(--color-primary);
   font-family: var(--ff-montserrat);
   font-size: 28px;
-
 }
+
 header nav {
   display: flex;
   flex: 1;
@@ -86,7 +85,7 @@ header nav {
 }
 .menu li a {
   text-decoration: none;
-  color: var(--color-default);
+  color: var(--color-primary);
 
 }
 .menu li a:hover {
@@ -114,14 +113,140 @@ header nav {
   border-radius: 2px;
 
 }
+/* Hero */
+.hero {
+  display: flex;
+  width: 100%;
+  height: 580px;
+  margin-top: 80px;
+  background-color: var(--background-primary);
+}
+.hero .container {
+  display: flex;
+  width: 100%;
+}
+.hero-left,
+.hero-right {
+  display: flex;
+  flex: 1;
+}
 
+.hero-left .hero-infor {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+}
+.hero-left .hero-infor h1 {
+  letter-spacing: -1px;
+  text-transform: uppercase;
+  font-size: 4.375rem; /* 70px */
+  line-height: 4.25rem; /* 68px */
+  font-weight: 800;
+  color: var(--color-primary);
+  margin-bottom: 5px;
+}
+
+.hero-left .hero-infor p {
+  font-size: 2.5rem; /* 40px */
+  font-weight: 400;
+  color: var(--color-primary);
+  margin-bottom: 5px;
+}
+
+.hero-left .hero-infor .profissao {
+  color: var(--color-span);
+  font-size: 2.5rem; /* 40px */
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.hero-infor .sociais {
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
+}
+
+.sociais {
+  display: flex;
+  align-items: flex-start;
+  padding: 5px;
+}
+.sociais a {
+  margin-right: 20px;
+}
+.sociais a svg {
+  fill: var(--color-gray);
+  transition: fill 0.1s ease;
+}
+
+.hero-infor .sociais a svg:hover {
+  fill: var(--color-hover);
+}
+
+.hero-right {
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.hero-right img {
+  width: 100%;
+  min-width: 300px;
+  height: auto;
+}
 
 @media (max-width: 768px) {
   .navBar {
       display: none; /* Esconde o menu em telas pequenas */
   }
   .menu-icon {
-    display: flex;
+      display: flex;
   }
-  
+
+  /* Hero */
+  .hero {
+      height: auto;
+  }
+  .hero .container {
+      flex-direction: column-reverse;
+      width: 100%;
+  }
+  .hero-left {
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      padding-bottom: 40px;
+      margin-top: -50px;
+  }
+  .hero-left .hero-infor {
+      padding: 0;
+      align-items: center;
+      text-align: center;
+  }
+  .hero-left .hero-infor h1 {
+      font-size: 2.5rem; /* Reduz o tamanho do título */
+      line-height: 2rem;
+  }
+  .hero-left .hero-infor p,
+  .hero-left .hero-infor .profissao {
+      font-size: 1.75rem; /* Ajusta os textos secundários */
+  }
+  .hero-right {
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+  }
+  .hero-right img {
+      width: 320px;
+      height: auto;
+  }
+  .hero-infor .sociais {
+      justify-content: center;
+      gap: 20px;
+  }
+  .sociais a {
+      margin-right: 0;
+  }
 }
+
