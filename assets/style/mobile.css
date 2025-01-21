@@ -1,0 +1,157 @@
+@media (max-width: 768px) {
+    /* ANIMAÇÕES */
+    .menu-overlay {
+      opacity: 0; /* Inicialmente invisível */
+      pointer-events: none; /* Desativa interações */
+      transition: opacity 0.3s ease-in-out; /* Animação de fade-in/fade-out */
+    }
+  
+    /* Menu com transição para aparecer da direita */
+    .menu {
+      transform: translateX(100%); /* Inicialmente fora da tela */
+      transition: transform 0.3s ease-in-out; /* Animação de entrada/saída */
+    }
+  
+    /* Quando o menu-overlay está ativo */
+    .menu-overlay.active {
+      opacity: 1; /* Torna visível */
+      pointer-events: all; /* Ativa interações */
+    }
+  
+    .menu-overlay.active .menu {
+      transform: translateX(0); /* Desliza o menu para a tela */
+    }
+    /* FIM ANIMAÇÕES */
+  
+    .menu-overlay {
+      display: flex;
+    }
+    .menu-close {
+      display: flex;
+      justify-content: flex-end;
+      width: 100%;
+      height: auto;
+      margin-bottom: 20px;
+    }
+  
+    .menu-close .icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 30px;
+      height: 30px;
+      cursor: pointer; /* Torna o cursor uma mão ao passar sobre o botão */
+      position: relative; /* Necessário para posicionar os spans */
+    }
+    
+    .menu-close .icon span {
+      position: absolute; /* Permite sobreposição dos spans para formar o "X" */
+      width: 100%;
+      height: 4px;
+      background-color: var(--color-gray);
+      border-radius: 2px;
+      transform-origin: center; /* Define o ponto de rotação */
+      transition: all 0.3s ease-in-out; /* Adiciona suavidade nas transições */
+    }
+    
+    /* Primeiro traço rotacionado */
+    .menu-close .icon span:first-child {
+      transform: rotate(45deg);
+    }
+    
+    /* Segundo traço rotacionado */
+    .menu-close .icon span:nth-child(2) {
+      transform: rotate(-45deg);
+    }
+    
+    /* Remove o terceiro traço (se necessário) */
+    .menu-close .icon span:nth-child(3) {
+      display: none;
+    }
+    
+    .menu-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.7); /* Fundo com transparência */
+      display: flex;
+      justify-content: flex-end; /* Alinha o menu à direita */
+      align-items: flex-start;
+      z-index: 1000;
+    }
+    /* Menu com largura fixa e colado ao lado direito */
+    .menu {
+      width: 200px;
+      height: 50%;
+      background-color: var(--background-secondary); /* Fundo branco do menu */
+      box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5); /* Sombra para o menu */
+      padding: 20px; /* Espaçamento interno */
+      box-sizing: border-box;
+      border-radius: 0 0 0 5px;
+    }
+    /* Estilização básica para os itens do menu */
+    .menu ul {
+      flex-direction: column;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      gap: 20px;
+    }
+    
+    .menu ul li a {
+      margin-left: 10px;
+      text-decoration: none;
+    }
+  
+    .menu-show {
+        display: flex;
+    }
+  
+    /* Hero */
+    .hero {
+        height: auto;
+    }
+    .hero .container {
+      flex-direction: column-reverse;
+      width: 100%;
+    }
+    .hero-left {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 40px;
+        margin-top: -50px;
+    }
+    .hero-left .hero-infor {
+        padding: 0;
+        align-items: center;
+        text-align: center;
+    }
+    .hero-left .hero-infor h1 {
+        font-size: 2.5rem; /* Reduz o tamanho do título */
+        line-height: 2rem;
+    }
+    .hero-left .hero-infor p,
+    .hero-left .hero-infor .profissao {
+        font-size: 1.75rem; /* Ajusta os textos secundários */
+    }
+    .hero-right {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    .hero-right img {
+        width: 320px;
+        height: auto;
+    }
+    .hero-infor .sociais {
+        justify-content: center;
+        gap: 20px;
+    }
+    .sociais a {
+        margin-right: 0;
+    }
+  }
+  

@@ -8,10 +8,8 @@
   --color-span: #00C29F;
   --color-hover: #00C29F;
   --color-gray: #86A1A3;
-
   --background-primary: #0b2b28;
   --background-secondary: #082321;
-
   --ff-montserrat: 'Montserrat', sans-serif;
   --ff-league-Spartan: 'League Spartan', sans-serif;
 }
@@ -72,18 +70,20 @@ header nav {
   height: 100%;
 }
 
-.navBar {
+.menu-overlay {
   display: flex;
   justify-content: space-between;
   align-items: center;  
 }
 
-.menu{
+.menu ul{
   display: flex;
   list-style: none;
   gap: 30px;
 }
-.menu li a {
+.menu ul li a {
+  display: block;
+  line-height: 30px;
   text-decoration: none;
   color: var(--color-primary);
 
@@ -92,13 +92,16 @@ header nav {
   color: var(--color-hover);
 }
 
-.menu-icon {
+.menu-show {
   display: none;
   justify-content: flex-end;
   flex: 1;
 }
+.menu-close {
+  display: none;
+}
 
-.menu-icon .icon {
+.menu-show .icon {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -106,13 +109,14 @@ header nav {
   height: 30px;
   padding: 2px;
 }
-.menu-icon .icon span {
+
+.menu-show .icon span {
   width: 100%;
   height: 4px;
   background-color: var(--color-gray);
   border-radius: 2px;
-
 }
+
 /* Hero */
 .hero {
   display: flex;
@@ -196,57 +200,4 @@ header nav {
   height: auto;
 }
 
-@media (max-width: 768px) {
-  .navBar {
-      display: none; /* Esconde o menu em telas pequenas */
-  }
-  .menu-icon {
-      display: flex;
-  }
-
-  /* Hero */
-  .hero {
-      height: auto;
-  }
-  .hero .container {
-      flex-direction: column-reverse;
-      width: 100%;
-  }
-  .hero-left {
-      width: 100%;
-      justify-content: center;
-      align-items: center;
-      padding-bottom: 40px;
-      margin-top: -50px;
-  }
-  .hero-left .hero-infor {
-      padding: 0;
-      align-items: center;
-      text-align: center;
-  }
-  .hero-left .hero-infor h1 {
-      font-size: 2.5rem; /* Reduz o tamanho do título */
-      line-height: 2rem;
-  }
-  .hero-left .hero-infor p,
-  .hero-left .hero-infor .profissao {
-      font-size: 1.75rem; /* Ajusta os textos secundários */
-  }
-  .hero-right {
-      width: 100%;
-      justify-content: center;
-      align-items: center;
-  }
-  .hero-right img {
-      width: 320px;
-      height: auto;
-  }
-  .hero-infor .sociais {
-      justify-content: center;
-      gap: 20px;
-  }
-  .sociais a {
-      margin-right: 0;
-  }
-}
 

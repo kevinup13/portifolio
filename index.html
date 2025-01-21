@@ -8,7 +8,8 @@
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
     <link rel="stylesheet" href="./assets/style/style.css">
-    <title>Portifólio</title>
+    <link rel="stylesheet" href="./assets/style/mobile.css">
+    <title>Portfólio</title>
 </head>
 
 <body>
@@ -17,16 +18,25 @@
             <div class="logo">
                 <a href="./index.html">Portfólio</a>
             </div>
-            <div class="navBar">
-                <ul class="menu">
-                    <li><a class="active" href="./index.html">Home</a></li>
-                    <li><a href="#sobre-mim">Sobre mim</a></li>
-                    <li><a href="#skills">Habilidades</a></li>
-                    <li><a href="#projetos">Projetos</a></li>
-                    <li><a href="#contato">Contato</a></li>
-                </ul>
+            <div class="menu-overlay">
+                <div class="menu">
+                    <div class="menu-close">
+                        <div class="icon">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                    <ul>
+                        <li><a class="active" href="./index.html">Home</a></li>
+                        <li><a href="#sobre-mim">Sobre mim</a></li>
+                        <li><a href="#skills">Habilidades</a></li>
+                        <li><a href="#projetos">Projetos</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="menu-icon">
+            <div class="menu-show">
                 <div class="icon">
                     <span></span>
                     <span></span>
@@ -67,33 +77,13 @@
                     <img src="./assets/images/hero.png" alt="Imagem de perfil">
                 </div>
             </div>
+        </section><!-- hero -->
+        <section class="sobre-mim">
+            <div class="container">...</div>
         </section>
     </main>
-
-
-    <!-- 
-    <main>
-        <section id="sobre">
-            <h1>Sobre Mim</h1>
-            <p>Texto sobre mim...</p>
-        </section>
-        <section id="skills">
-            <h1>Minhas Skills</h1>
-            <p>Texto sobre skills...</p>
-        </section>
-        <section id="portifolio">
-            <h1>Meu Portifólio</h1>
-            <p>Texto sobre portfólio...</p>
-        </section>
-        <section id="contato">
-            <h1>Contato</h1>
-            <p>Texto de contato...</p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2025 Kevin Lopes. Todos os direitos reservados.</p>
-    </footer> -->
     <script src="./assets/script/script.js"></script>
+    <script src="./assets/script/mobile.js"></script>
 </body>
 
 </html>
