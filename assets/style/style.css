@@ -1,20 +1,19 @@
-/* Importação de fontes */
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;300;400;500;600;700;900&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
 
-/* Definição de variáveis */
+/*---------------Variáveis globais--------------- */
 :root {
   --color-primary: rgb(185, 185, 185);
   --color-secondary: rgb(28, 28, 28);
   --color-span: #00C29F;
   --color-hover: #00C29F;
-  --color-gray: #86A1A3;
+  --color-gray: #555;
   --background-primary: #0b2b28;
   --background-secondary: #082321;
   --ff-montserrat: 'Montserrat';
   --ff-league-Spartan: 'League Spartan';
 }
 
-/* Estilos globais */
+/* ---------------Estilos globais--------------- */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -23,19 +22,71 @@
   transition: all ease-in-out 0.2s;
   font-size: 16px;
 }
+/* --------------HTML--------------- */
 html {
-  scroll-behavior: smooth !important;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  overflow-y: scroll;
   font-size: 100%;
 }
-
-
-/* Header */
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
+/* --------------Barra de rolagem--------------- */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(26, 26, 26);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-gray); 
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-hover); 
+}
+
+/* ---------------Animações--------------- */
+.animate {
+  opacity: 0;
+  transform: translateY(20px); /* Posição inicial padrão */
+  transition: all 0.6s ease-in-out;
+}
+
+.animate[data-animation="fade-up"] {
+  transform: translateY(20px);
+}
+
+.animate[data-animation="fade-down"] {
+  transform: translateY(-20px);
+}
+
+.animate[data-animation="slide-left"] {
+  transform: translateX(-30px);
+}
+
+.animate[data-animation="slide-right"] {
+  transform: translateX(30px);
+}
+
+.animate[data-animation="zoom-in"] {
+  transform: scale(0.8);
+}
+
+/* Quando a classe 'show' é adicionada, a animação ocorre */
+.animate.show {
+  opacity: 1;
+  transform: translate(0, 0) scale(1);
+}
+
+/* ---------------HEADER--------------- */
 header {
   width: 100%;
   height: 80px;
@@ -118,7 +169,7 @@ header nav {
   border-radius: 2px;
 }
 
-/* Hero */
+/* ---------------Hero--------------- */
 .hero {
   display: flex;
   width: 100%;
@@ -126,10 +177,12 @@ header nav {
   margin-top: 80px;
   background-color: var(--background-primary);
 }
+
 .hero .container {
   display: flex;
   width: 100%;
 }
+
 .hero-left,
 .hero-right {
   display: flex;
@@ -143,6 +196,7 @@ header nav {
   align-items: flex-start;
   padding: 20px;
 }
+
 .hero-left .hero-infor h1 {
   letter-spacing: -1px;
   text-transform: uppercase;
@@ -200,9 +254,8 @@ header nav {
   min-width: 300px;
   height: auto;
 }
-/* Fim Header */
 
-/* Sobre mim */
+/* ---------------SOBRE MIM--------------- */
 .sobre-mim {
   display: flex;
   width: 100%;
@@ -225,7 +278,6 @@ header nav {
   font-size: 40px;
   font-family: var(--ff-league-Spartan);
   font-weight: 500;
-  line-height: 1.4;
   color: var(--color-span);
 }
 
@@ -268,7 +320,7 @@ header nav {
 }
 
 .sobre-mim-right .sobre-mim-infor .area-video iframe {
-  width: 100%; /* O iframe ocupa 100% da largura do container */
+  width: inherit; /* O iframe ocupa 100% da largura do container */
   max-width: 800px; /* Limita a largura máxima do vídeo */
   aspect-ratio: 16 / 9; /* Garante a proporção de 16:9 */
   border: none; /* Remove bordas padrão do iframe */
@@ -283,8 +335,9 @@ header nav {
   gap: 20px;
 }
 .sobre-mim-right .sobre-mim-infor .area-bottons-idiomas button {
+  width: 120px;
   padding: 5px 10px;
-  border: none;
+  border: 1px solid var(--color-gray);
   border-radius: 5px;
   background-color: var(--color-secondary);
   color: var(--color-primary);
@@ -295,4 +348,4 @@ header nav {
   background-color: var(--color-hover);
   color: var(--color-secondary);
 }
-/* Fim Sobre mim */
+

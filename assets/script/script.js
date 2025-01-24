@@ -1,7 +1,34 @@
+/* -------------ANIMAÇÕES---------------*/
+// Seleciona todos os elementos com a classe 'animate'
+const animatedElements = document.querySelectorAll('.animate');
 
+// Verifica se o elemento está visível na janela
+function isVisible(element) {
+    const rect = element.getBoundingClientRect();
+    return rect.top <= window.innerHeight - 100;
+}
+
+// Adiciona a classe 'show' para ativar a animação
+function handleScroll() {
+    animatedElements.forEach(el => {
+        if (isVisible(el)) {
+            el.classList.add('show');
+        }
+    });
+}
+
+// Escuta o evento de rolagem
+window.addEventListener('scroll', handleScroll);
+
+// Inicializa animações ao carregar a página
+handleScroll();
+
+
+
+/* -------------TROCA DE VÍDEO---------------*/
 const videoUrls = {
-    pt: "./assets/midia/video-01.mp4", // URL do vídeo em Português
-    en: "./assets/midia/video-02.mp4", // URL do vídeo em Inglês
+    pt: "./assets/midia/video-pt.mp4", // URL do vídeo em Português
+    en: "./assets/midia/video-en.mp4", // URL do vídeo em Inglês
   };
   
   // Seleciona o iframe e os botões
@@ -17,4 +44,4 @@ const videoUrls = {
   // Eventos de clique para os botões
   btnPt.addEventListener("click", () => changeVideo("pt"));
   btnEn.addEventListener("click", () => changeVideo("en"));
-  
+  /* -------------FIM TROCA DE VÍDEO---------------*/
