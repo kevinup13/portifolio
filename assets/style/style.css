@@ -10,8 +10,8 @@
   --color-gray: #86A1A3;
   --background-primary: #0b2b28;
   --background-secondary: #082321;
-  --ff-montserrat: 'Montserrat', sans-serif;
-  --ff-league-Spartan: 'League Spartan', sans-serif;
+  --ff-montserrat: 'Montserrat';
+  --ff-league-Spartan: 'League Spartan';
 }
 
 /* Estilos globais */
@@ -24,7 +24,7 @@
   font-size: 16px;
 }
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: smooth !important;
   font-size: 100%;
 }
 
@@ -44,6 +44,7 @@ header {
   top: 0;
   left: 0;
   z-index: 1000;
+  border-bottom: 1px solid var(--color-gray);
 }
 
 .logo {
@@ -199,5 +200,99 @@ header nav {
   min-width: 300px;
   height: auto;
 }
+/* Fim Header */
 
+/* Sobre mim */
+.sobre-mim {
+  display: flex;
+  width: 100%;
+  height: auto;
+  background-color: var(--background-secondary);
+}
 
+.sobre-mim .container {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.sobre-mim .container .title {
+  display: flex;
+  padding: 0 20px; 
+  justify-content: flex-start;
+}
+
+.sobre-mim .container .title h2 {
+  font-size: 40px;
+  font-family: var(--ff-league-Spartan);
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--color-span);
+}
+
+.sobre-mim .container .sobre-mim-sides {
+  display: flex;
+}
+.sobre-mim-left,
+.sobre-mim-right {
+  flex: 1;
+  height: auto;
+}
+
+.sobre-mim-left .sobre-mim-infor,
+.sobre-mim-right .sobre-mim-infor {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+.sobre-mim-left .sobre-mim-infor p,
+.sobre-mim-right .sobre-mim-infor p {
+  font-size: 16px;
+  color: var(--color-primary);
+  margin-bottom: 20px;
+  line-height: 1.6;
+  text-align: justify;
+}
+.sobre-mim-left .sobre-mim-infor span {
+  color: var(--color-span);
+}
+
+.sobre-mim-right .sobre-mim-infor .area-video {
+  display: flex;
+  justify-content: center; /* Centraliza o vídeo horizontalmente */
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.sobre-mim-right .sobre-mim-infor .area-video iframe {
+  width: 100%; /* O iframe ocupa 100% da largura do container */
+  max-width: 800px; /* Limita a largura máxima do vídeo */
+  aspect-ratio: 16 / 9; /* Garante a proporção de 16:9 */
+  border: none; /* Remove bordas padrão do iframe */
+  border-radius: 5px;
+}
+
+.sobre-mim-right .sobre-mim-infor .area-bottons-idiomas {
+  display: flex;
+  width: 100%;
+  height: auto;
+  justify-content: flex-start;
+  gap: 20px;
+}
+.sobre-mim-right .sobre-mim-infor .area-bottons-idiomas button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  cursor: pointer;
+  transition: all ease-in-out 0.2s;
+}
+.sobre-mim-right .sobre-mim-infor .area-bottons-idiomas button:hover {
+  background-color: var(--color-hover);
+  color: var(--color-secondary);
+}
+/* Fim Sobre mim */

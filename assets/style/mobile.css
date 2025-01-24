@@ -1,157 +1,214 @@
 @media (max-width: 768px) {
-    /* ANIMAÇÕES */
-    .menu-overlay {
-      opacity: 0; /* Inicialmente invisível */
-      pointer-events: none; /* Desativa interações */
-      transition: opacity 0.3s ease-in-out; /* Animação de fade-in/fade-out */
-    }
+  /* ANIMAÇÕES */
+  .menu-overlay {
+    opacity: 0; /* Inicialmente invisível */
+    pointer-events: none; /* Desativa interações */
+    transition: opacity 0.3s ease-in-out; /* Animação de fade-in/fade-out */
+  }
+
+  /* Menu com transição para aparecer da direita */
+  .menu {
+    transform: translateX(100%); /* Inicialmente fora da tela */
+    transition: transform 0.3s ease-in-out; /* Animação de entrada/saída */
+  }
+
+  /* Quando o menu-overlay está ativo */
+  .menu-overlay.active {
+    opacity: 1; /* Torna visível */
+    pointer-events: all; /* Ativa interações */
+  }
+
+  .menu-overlay.active .menu {
+    transform: translateX(0); /* Desliza o menu para a tela */
+  }
+  /* FIM ANIMAÇÕES */
+
+  .menu-overlay {
+    display: flex;
+  }
+  .menu-close {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .menu-close .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    cursor: pointer; /* Torna o cursor uma mão ao passar sobre o botão */
+    position: relative; /* Necessário para posicionar os spans */
+  }
   
-    /* Menu com transição para aparecer da direita */
-    .menu {
-      transform: translateX(100%); /* Inicialmente fora da tela */
-      transition: transform 0.3s ease-in-out; /* Animação de entrada/saída */
-    }
+  .menu-close .icon span {
+    position: absolute; /* Permite sobreposição dos spans para formar o "X" */
+    width: 100%;
+    height: 4px;
+    background-color: var(--color-gray);
+    border-radius: 2px;
+    transform-origin: center; /* Define o ponto de rotação */
+    transition: all 0.3s ease-in-out; /* Adiciona suavidade nas transições */
+  }
   
-    /* Quando o menu-overlay está ativo */
-    .menu-overlay.active {
-      opacity: 1; /* Torna visível */
-      pointer-events: all; /* Ativa interações */
-    }
+  /* Primeiro traço rotacionado */
+  .menu-close .icon span:first-child {
+    transform: rotate(45deg);
+  }
   
-    .menu-overlay.active .menu {
-      transform: translateX(0); /* Desliza o menu para a tela */
-    }
-    /* FIM ANIMAÇÕES */
+  /* Segundo traço rotacionado */
+  .menu-close .icon span:nth-child(2) {
+    transform: rotate(-45deg);
+  }
   
-    .menu-overlay {
+  /* Remove o terceiro traço (se necessário) */
+  .menu-close .icon span:nth-child(3) {
+    display: none;
+  }
+  
+  .menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo com transparência */
+    display: flex;
+    justify-content: flex-end; /* Alinha o menu à direita */
+    align-items: flex-start;
+    z-index: 1000;
+  }
+  /* Menu com largura fixa e colado ao lado direito */
+  .menu {
+    width: 200px;
+    height: 50%;
+    background-color: var(--background-secondary); /* Fundo branco do menu */
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5); /* Sombra para o menu */
+    padding: 20px; /* Espaçamento interno */
+    box-sizing: border-box;
+    border-radius: 0 0 0 5px;
+  }
+  /* Estilização básica para os itens do menu */
+  .menu ul {
+    flex-direction: column;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+  }
+  
+  .menu ul li a {
+    margin-left: 10px;
+    text-decoration: none;
+  }
+
+  .menu-show {
       display: flex;
-    }
-    .menu-close {
-      display: flex;
-      justify-content: flex-end;
-      width: 100%;
+  }
+
+  /* Hero */
+  .hero {
       height: auto;
-      margin-bottom: 20px;
-    }
-  
-    .menu-close .icon {
-      display: flex;
+  }
+  .hero .container {
+    flex-direction: column-reverse;
+    width: 100%;
+  }
+  .hero-left {
+      width: 100%;
       justify-content: center;
       align-items: center;
-      width: 30px;
-      height: 30px;
-      cursor: pointer; /* Torna o cursor uma mão ao passar sobre o botão */
-      position: relative; /* Necessário para posicionar os spans */
-    }
-    
-    .menu-close .icon span {
-      position: absolute; /* Permite sobreposição dos spans para formar o "X" */
-      width: 100%;
-      height: 4px;
-      background-color: var(--color-gray);
-      border-radius: 2px;
-      transform-origin: center; /* Define o ponto de rotação */
-      transition: all 0.3s ease-in-out; /* Adiciona suavidade nas transições */
-    }
-    
-    /* Primeiro traço rotacionado */
-    .menu-close .icon span:first-child {
-      transform: rotate(45deg);
-    }
-    
-    /* Segundo traço rotacionado */
-    .menu-close .icon span:nth-child(2) {
-      transform: rotate(-45deg);
-    }
-    
-    /* Remove o terceiro traço (se necessário) */
-    .menu-close .icon span:nth-child(3) {
-      display: none;
-    }
-    
-    .menu-overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      background-color: rgba(0, 0, 0, 0.7); /* Fundo com transparência */
-      display: flex;
-      justify-content: flex-end; /* Alinha o menu à direita */
-      align-items: flex-start;
-      z-index: 1000;
-    }
-    /* Menu com largura fixa e colado ao lado direito */
-    .menu {
-      width: 200px;
-      height: 50%;
-      background-color: var(--background-secondary); /* Fundo branco do menu */
-      box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5); /* Sombra para o menu */
-      padding: 20px; /* Espaçamento interno */
-      box-sizing: border-box;
-      border-radius: 0 0 0 5px;
-    }
-    /* Estilização básica para os itens do menu */
-    .menu ul {
-      flex-direction: column;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      gap: 20px;
-    }
-    
-    .menu ul li a {
-      margin-left: 10px;
-      text-decoration: none;
-    }
-  
-    .menu-show {
-        display: flex;
-    }
-  
-    /* Hero */
-    .hero {
-        height: auto;
-    }
-    .hero .container {
-      flex-direction: column-reverse;
-      width: 100%;
-    }
-    .hero-left {
-        width: 100%;
-        justify-content: center;
-        align-items: center;
-        padding-bottom: 40px;
-        margin-top: -50px;
-    }
-    .hero-left .hero-infor {
-        padding: 0;
-        align-items: center;
-        text-align: center;
-    }
-    .hero-left .hero-infor h1 {
-        font-size: 2.5rem; /* Reduz o tamanho do título */
-        line-height: 2rem;
-    }
-    .hero-left .hero-infor p,
-    .hero-left .hero-infor .profissao {
-        font-size: 1.75rem; /* Ajusta os textos secundários */
-    }
-    .hero-right {
-        width: 100%;
-        justify-content: center;
-        align-items: center;
-    }
-    .hero-right img {
-        width: 320px;
-        height: auto;
-    }
-    .hero-infor .sociais {
-        justify-content: center;
-        gap: 20px;
-    }
-    .sociais a {
-        margin-right: 0;
-    }
+      padding-bottom: 40px;
+      margin-top: -50px;
   }
+  .hero-left .hero-infor {
+      padding: 0;
+      align-items: center;
+      text-align: center;
+  }
+  .hero-left .hero-infor h1 {
+      font-size: 2.5rem; /* Reduz o tamanho do título */
+      line-height: 2rem;
+  }
+  .hero-left .hero-infor p,
+  .hero-left .hero-infor .profissao {
+      font-size: 1.75rem; /* Ajusta os textos secundários */
+  }
+  .hero-right {
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+  }
+  .hero-right img {
+      width: 320px;
+      height: auto;
+  }
+  .hero-infor .sociais {
+      justify-content: center;
+      gap: 20px;
+  }
+  .sociais a {
+      margin-right: 0;
+  }
+
+  /* Sobre mim */
+  .sobre-mim {
+    flex-direction: column; 
+  }
+
+  /* Título */
+  .sobre-mim .container .title {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+
+  .sobre-mim .container .title h2 {
+    font-size: 28px; 
+    line-height: 1.3;
+    text-align: center; 
+  }
+
+  /* Lados (Left e Right) */
+  .sobre-mim .container .sobre-mim-sides {
+    flex-direction: column;
+  }
+
+  .sobre-mim-left,
+  .sobre-mim-right {
+    width: 100%;
+  }
+  .sobre-mim-left .sobre-mim-infor,
+  .sobre-mim-right .sobre-mim-infor {
+    padding: 0;
+  }
+
+  /* Textos */
+  .sobre-mim-left .sobre-mim-infor p,
+  .sobre-mim-right .sobre-mim-infor p {
+    font-size: 14px; 
+    line-height: 1.4;
+    text-align: justify;
+  }
+
+  /* Vídeo */
+  .sobre-mim-right .sobre-mim-infor .area-video iframe {
+    width: 100%; 
+    aspect-ratio: 16 / 9; 
+  }
+
+  /* Botões de Idiomas */
+  .sobre-mim-right .sobre-mim-infor .area-bottons-idiomas {
+    justify-content: center; /* Centraliza os botões */
+  }
+
+  .sobre-mim-right .sobre-mim-infor .area-bottons-idiomas button {
+    padding: 8px 15px; 
+    font-size: 14px; 
+  }
+}
+
   
