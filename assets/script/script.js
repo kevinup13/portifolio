@@ -23,8 +23,6 @@ window.addEventListener('scroll', handleScroll);
 // Inicializa animações ao carregar a página
 handleScroll();
 
-
-
 /* -------------TROCA DE VÍDEO---------------*/
 const videoUrls = {
     pt: "./assets/midia/video-pt.mp4", // URL do vídeo em Português

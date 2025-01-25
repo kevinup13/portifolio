@@ -209,6 +209,49 @@
     padding: 8px 15px; 
     font-size: 14px; 
   }
+
+  /* TECNOLOGIAS */
+  .tecnologias .container {
+    height: auto; /* Ajusta a altura para se adaptar ao conteúdo */
+    padding: 20px;
+  }
+  .tecnologias .container .title {
+    margin-bottom: 20px;
+  }
+  .tecnologias .container .title h2 {
+    font-size: 32px; /* Reduz o tamanho da fonte do título */
+    text-align: center; /* Centraliza o texto */
+  }
+
+  .tecnologias .container .tecnologias-conteudo {
+    flex-direction: column; /* Empilha as categorias verticalmente */
+    gap: 20px; /* Aumenta o espaço entre as categorias */
+    padding: 0;
+  }
+
+  .tecnologias .container .tecnologias-conteudo .categoria-title h3 {
+    font-size: 20px; /* Reduz o tamanho da fonte do título das categorias */
+  }
+
+  .tecnologias-grid {
+    gap: 15px; /* Aumenta o espaçamento entre os itens */
+  }
+
+  .tecnologia {
+    padding: 10px; /* Ajusta o espaçamento interno */
+  }
+
+  .tecnologia-icon img {
+    width: 60px; /* Reduz o tamanho dos ícones */
+    height: 60px;
+  }
+
+  .tecnologia-name {
+    font-size: 0.8rem; /* Reduz o tamanho do texto */
+  }
+
+
+
 }
 
   
