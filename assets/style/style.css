@@ -265,7 +265,7 @@ header nav {
 
 .sobre-mim .container {
   margin-top: 100px;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 }
 
 .sobre-mim .container .title {
@@ -361,7 +361,9 @@ header nav {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 600px;
+  height: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 .tecnologias .container .title {

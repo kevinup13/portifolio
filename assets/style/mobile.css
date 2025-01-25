@@ -130,12 +130,12 @@
       text-align: center;
   }
   .hero-left .hero-infor h1 {
-      font-size: 2.5rem; /* Reduz o tamanho do título */
-      line-height: 2rem;
+      font-size: 45px; /* Reduz o tamanho do título */
+      line-height: 38px;
   }
   .hero-left .hero-infor p,
   .hero-left .hero-infor .profissao {
-      font-size: 1.75rem; /* Ajusta os textos secundários */
+      font-size: 24px; /* Ajusta os textos secundários */
   }
   .hero-right {
       width: 100%;
@@ -162,6 +162,7 @@
   /* Título */
   .sobre-mim .container .title {
     width: 100%;
+    justify-content: center;
     padding: 0;
     margin-bottom: 20px;
   }
@@ -216,7 +217,10 @@
     padding: 20px;
   }
   .tecnologias .container .title {
-    margin-bottom: 20px;
+  width: 100%;
+  justify-content: center;
+  padding: 0;
+  margin-bottom: 20px;
   }
   .tecnologias .container .title h2 {
     font-size: 32px; /* Reduz o tamanho da fonte do título */
