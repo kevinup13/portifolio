@@ -564,3 +564,66 @@ text-align: center;}
   background-color: var(--color-hover);
   color: var(--background-secondary);
 }
+
+/* ------------CONTATO--------------- */
+/* ------------------------- CONTATO ------------------------- */
+.contato {
+  background-color: var(--background-secondary);
+  padding: 50px 20px;
+}
+
+.contato .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contato .title h2 {
+  font-size: 40px;
+  font-family: var(--ff-league-Spartan);
+  font-weight: 500;
+  color: var(--color-span);
+  margin-bottom: 20px;
+}
+
+.contato-content {
+  width: 100%;
+  max-width: 600px;
+}
+
+.contato-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contato-form input,
+.contato-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--background-primary);
+  color: var(--color-primary);
+  font-size: 1rem;
+}
+
+.contato-form input:focus,
+.contato-form textarea:focus {
+  outline: 2px solid var(--color-span);
+}
+
+.contato-form button {
+  padding: 12px;
+  background-color: var(--color-span);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contato-form button:hover {
+  background-color: var(--color-hover);
+}
