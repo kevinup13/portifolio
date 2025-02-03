@@ -23,6 +23,11 @@ window.addEventListener('scroll', handleScroll);
 // Inicializa animações ao carregar a página
 handleScroll();
 
+
+/* -------------VIDEO--------------- */
+const video = document.getElementsByTagName('iframe');
+video.autoplay = false;
+
 /* -------------TROCA DE VÍDEO---------------*/
 const videoUrls = {
     pt: "./assets/midia/video-pt.mp4", // URL do vídeo em Português

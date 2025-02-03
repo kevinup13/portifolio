@@ -6,7 +6,7 @@
   --color-secondary: rgb(28, 28, 28);
   --color-span: #00C29F;
   --color-hover: #00C29F;
-  --color-gray: #555;
+  --color-gray: #727272;
   --background-primary: #0b2b28;
   --background-secondary: #082321;
   --ff-montserrat: 'Montserrat';
@@ -369,7 +369,7 @@ header nav {
 .tecnologias .container .title {
   display: flex;
   padding: 0 20px; 
-  justify-content: flex-start;
+  justify-content: center;
 }
 .tecnologias .container .title h2 {
   font-size: 40px;
@@ -404,7 +404,7 @@ header nav {
   font-family: var(--ff-league-Spartan);
   font-weight: 500;
   color: var(--color-primary);
-}
+text-align: center;}
 
 /* Grid das tecnologias */
 .tecnologias-grid {
@@ -458,4 +458,109 @@ header nav {
   background-color: var(--color-span); /* Cor da barra */
   border-radius: 5px;
   transition: width 0.3s ease;
+}
+
+/* ------------PROJETOS--------------- */
+.projetos {
+  display: flex;
+  width: 100%;
+  height: auto;
+  background-color: var(--background-secondary);
+}
+
+.projetos .container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.projetos .container .title {
+  display: flex;
+  padding: 0 20px; 
+  justify-content: center;
+}
+.projetos .container .title h2 {
+  font-size: 40px;
+  font-family: var(--ff-league-Spartan);
+  font-weight: 500;
+  color: var(--color-span);
+}
+.projetos .container .projetos-conteudo {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: auto;
+  padding: 20px;
+  gap: 20px;
+  justify-content: center;
+}
+
+.projeto-card {
+  min-width: 300px;
+  flex: 1;
+  margin: 10px;
+  background-color: var(--background-primary);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projeto-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.projeto-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.projeto-info {
+  padding: 15px;
+  text-align: center;
+}
+
+.projeto-info h3 {
+  font-size: 1.2rem;
+  color: var(--color-primary);
+}
+
+.projeto-info p {
+  font-size: 0.9rem;
+  color: var(--color-gray);
+  margin: 10px 0;
+}
+
+.projeto-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btn {
+  text-decoration: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+
+  border: 1px solid var(--color-gray);
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  cursor: pointer;
+  transition: all ease-in-out 0.2s;
+}
+
+.btn-demo {
+  background-color: var(--color-secondary);
+}
+
+.btn:hover {
+  background-color: var(--color-hover);
+  color: var(--background-secondary);
 }
