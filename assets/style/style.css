@@ -627,3 +627,41 @@ text-align: center;}
 .contato-form button:hover {
   background-color: var(--color-hover);
 }
+
+/* ------------------------- FOOTER ------------------------- */
+.footer {
+  background-color: var(--background-primary);
+  padding: 20px 0;
+  border-top: 1px solid var(--color-gray);
+}
+
+.footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0 20px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.footer-content p {
+  color: var(--color-gray);
+  font-size: 0.9rem;
+}
+
+.footer-socials a {
+  margin-left: 15px;
+  color: var(--color-gray);
+  transition: color 0.3s ease;
+}
+
+.footer-socials a:hover {
+  color: var(--color-hover);
+}
+
