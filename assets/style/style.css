@@ -543,12 +543,12 @@ text-align: center;}
 }
 
 .btn {
+  width: 100px;
   text-decoration: none;
-  padding: 8px 15px;
+  padding: 5px 10px;
   border-radius: 5px;
   font-weight: bold;
   transition: background 0.3s ease;
-
   border: 1px solid var(--color-gray);
   background-color: var(--color-secondary);
   color: var(--color-primary);
@@ -565,8 +565,8 @@ text-align: center;}
   color: var(--background-secondary);
 }
 
+
 /* ------------CONTATO--------------- */
-/* ------------------------- CONTATO ------------------------- */
 .contato {
   background-color: var(--background-secondary);
   padding: 50px 20px;
