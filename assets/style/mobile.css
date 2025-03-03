@@ -253,14 +253,22 @@
   .tecnologia-name {
     font-size: 0.8rem; /* Reduz o tamanho do texto */
   }
-  .footer-content {
-    flex-direction: column;
-    gap: 10px;
-    text-align: center;
-  }
+  
 
 
 
 }
+@media (max-width: 420px) {
+  .contato-content {
+    flex-direction: column; /* Coloca os itens empilhados em telas pequenas */
+    gap: 10px;
+  }
 
+  .contato-content a {
+    width: 90%; /* Ocupa quase toda a largura para melhor toque */
+    justify-content: left;
+    padding-left: 10%;
+    font-size: 1.1rem;
+  }
+}
   
