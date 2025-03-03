@@ -569,14 +569,12 @@ text-align: center;}
 /* ------------CONTATO--------------- */
 .contato {
   background-color: var(--background-secondary);
-  padding: 50px 20px;
-}
-
-.contato .container {
+  padding: 50px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
 
 .contato .title h2 {
   font-size: 40px;
@@ -587,82 +585,47 @@ text-align: center;}
 }
 
 .contato-content {
-  width: 100%;
-  max-width: 600px;
-}
-
-.contato-form {
   display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.contato-form input,
-.contato-form textarea {
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  padding: 12px;
-  border: none;
-  border-radius: 5px;
+  height: 200px;
   background-color: var(--background-primary);
-  color: var(--color-primary);
-  font-size: 1rem;
+  gap: 40px;
+}
+.contato-content a {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; /* Espaço entre o ícone e o texto */
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: var(--color-gray);
+  padding: 10px;
+}
+.contato-content a:hover,
+.contato-content a:hover i {
+  color: var(--color-span);
+} 
+
+.contato-content i {
+  font-size: 1.5rem; /* Tamanho dos ícones */
+  color: var(--color-gray); /* Cor padrão */
 }
 
-.contato-form input:focus,
-.contato-form textarea:focus {
-  outline: 2px solid var(--color-span);
-}
-
-.contato-form button {
-  width: 100%;
-  padding: 12px;
-  background-color: var(--color-span);
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.contato-form button:hover {
-  background-color: var(--color-hover);
-}
 
 /* ------------------------- FOOTER ------------------------- */
 .footer {
-  background-color: var(--background-primary);
-  padding: 20px 0;
-  border-top: 1px solid var(--color-gray);
-}
-
-.footer .container {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  text-align: center;
+  background-color: black;
   flex-wrap: wrap;
-  padding: 0 20px;
+  padding: 10px;
 }
 
-.footer-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-}
-
-.footer-content p {
+.footer p {
   color: var(--color-gray);
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
 
-.footer-socials a {
-  margin-left: 15px;
-  color: var(--color-gray);
-  transition: color 0.3s ease;
-}
 
-.footer-socials a:hover {
-  color: var(--color-hover);
-}
 
