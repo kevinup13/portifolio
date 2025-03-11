@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;300;400;500;600;700;900&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Fahkwang:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 /*---------------Variáveis globais--------------- */
 :root {
   --color-primary: rgb(185, 185, 185);
@@ -10,6 +10,7 @@
   --background-primary: #0b2b28;
   --background-secondary: #082321;
   --ff-montserrat: 'Montserrat';
+  --ff-fahkwang: 'Fahkwang';
   --ff-league-Spartan: 'League Spartan';
 }
 
@@ -84,6 +85,17 @@ html {
 .animate.show {
   opacity: 1;
   transform: translate(0, 0) scale(1);
+}
+
+.cursor {
+  display: inline-block;
+  width: 12px;
+  animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
 }
 
 /* ---------------HEADER--------------- */
@@ -195,30 +207,34 @@ header nav {
   justify-content: center;
   align-items: flex-start;
   padding: 20px;
+  margin-top: 10px;
 }
 
 .hero-left .hero-infor h1 {
+  font-family: var(--ff-fahkwang);
   letter-spacing: -1px;
   font-size: 75px; /* 70px */
   line-height: 75px; /* 68px */
   font-weight: 800;
   color: var(--color-primary);
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .hero-left .hero-infor p {
   font-size: 40px; /* 40px */
   font-weight: 400;
   color: var(--color-primary);
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 .hero-left .hero-infor .profissao {
+  font-family: var(--ff-montserrat);
+  letter-spacing: 5px;
   color: var(--color-span);
-  font-size: 30px;
-  font-weight: 700;
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 10px;
   text-transform: uppercase;
-  margin-bottom: 5px;
 }
 
 .hero-infor .sociais {

@@ -1,4 +1,36 @@
 /* -------------ANIMAÇÕES---------------*/
+
+/* Animação da profissão */
+document.addEventListener("DOMContentLoaded", function () {
+    const profissaoElement = document.getElementById("profissao");
+    const profissoes = ["Engenheiro de Software", "Desenvolvedor Web"];
+    let profissaoIndex = 0;
+    let charIndex = 0;
+    let apagando = false;
+
+    function typeEffect() {
+        const textoAtual = profissoes[profissaoIndex];
+
+        if (!apagando && charIndex < textoAtual.length) {
+            profissaoElement.innerHTML = textoAtual.substring(0, charIndex + 1) + "<span class='cursor'>|</span>";
+            charIndex++;
+            setTimeout(typeEffect, 100);
+        } else if (apagando && charIndex > 0) {
+            profissaoElement.innerHTML = textoAtual.substring(0, charIndex - 1) + "<span class='cursor'>|</span>";
+            charIndex--;
+            setTimeout(typeEffect, 50);
+        } else {
+            apagando = !apagando;
+            if (!apagando) {
+                profissaoIndex = (profissaoIndex + 1) % profissoes.length;
+            }
+            setTimeout(typeEffect, 1000);
+        }
+    }
+
+    typeEffect();
+});
+
 // Seleciona todos os elementos com a classe 'animate'
 const animatedElements = document.querySelectorAll('.animate');
 
